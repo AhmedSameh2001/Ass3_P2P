@@ -39,6 +39,9 @@ class Block {
         this._previousHash = _previousHash;
         this.curuntTime = curuntTime;
         this.trans = trans;
+
+
+        
         this.hash = this.calcHash();
         this.nonce = 0;
     }
