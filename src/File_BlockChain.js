@@ -41,7 +41,7 @@ class Block {
         this.trans = trans;
 
 
-        
+
         this.hash = this.calcHash();
         this.nonce = 0;
     }
@@ -135,44 +135,6 @@ class Blockchain {
         return true;
     }
 }
-
-//Writing
-function saveJSON(filename = "") {
-    return file.writeFileSync(filename, JSON.stringify(blockChainCoin, null, 2));
-}
-
-//Load
-const dataSaved = loadJSON("./src/dataSaved.json");
-
-//Add Block 2
-console.log("Mining block 2...");
-blockChainCoin.addBlock(new Block(4, "2/04/2022", { amount: 10 }));
-//Add Block 3
-console.log("Mining block 3...");
-blockChainCoin.addBlock(new Block(5, "3/04/2022", { amount: 20 }));
-//Add Block 4
-console.log("Mining block 4...");
-blockChainCoin.addBlock(new Block(6, "4/04/2022", { amount: 30 }));
-//Add Block 5
-console.log("Mining block 5...");
-blockChainCoin.addBlock(new Block(7, "5/04/2022", { amount: 40 }));
-//Add Block 6
-console.log("Mining block 6...");
-blockChainCoin.addBlock(new Block(8, "6/04/2022", { amount: 50 }));
-//Add Block 7
-console.log("Mining block 7...");
-blockChainCoin.addBlock(new Block(9, "7/04/2022", { amount: 60 }));
-
-//dataSaved.json  // save
-console.log("Mining block 8...");
-blockChainCoin.addBlock(new Block(10, "8/04/2022", { amount: 70 }));
-
-//Save
-saveJSON("./src/dataSaved.json", data);
-
-//print
-console.log(loadJSON('./src/dataSaved.json'));
-
 
 module.exports.Blockchain = Blockchain;
 module.exports.Transaction = Transaction;

@@ -6,13 +6,6 @@ const _publicKey = keys.getPublic('hex');
 const _privateKey = keys.getPrivate('hex');
 console.log();
 
-
-
 console.log('The Private key:', _privateKey);
 console.log();
 console.log('The Public key:', _publicKey);
-
-
-
-
-
